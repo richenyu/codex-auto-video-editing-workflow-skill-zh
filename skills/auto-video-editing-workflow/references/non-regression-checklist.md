@@ -40,12 +40,33 @@ BGM 来自用户指定目录
 必须有抽帧/解码 QA
 ```
 
+## 四条质量线
+
+每次正式出片必须同时通过：
+
+```text
+口播清理不丢
+素材匹配不丢
+字幕/BGM/音效不丢
+QA 审计不丢
+```
+
+检查标准：
+
+- 口播清理：停顿、错话、重复、重说、废话已经处理，不能用素材遮。
+- 素材匹配：每个素材事件贴当前句子，好看、不重复、无视觉相似重复。
+- 字幕/BGM/音效：字幕对齐最终音频，BGM 轻快不压人声，音效轻且不固定。
+- QA 审计：有素材来源表、规则审计、抽帧/事件图、解码和音量检查。
+
 ## 必须审计字段
 
 ```text
 speech_cleanup_pass
 speech_speed_multiplier
 captions_enabled
+material_match_pass
+caption_bgm_sfx_pass
+final_qa_audit_pass
 bgm_path
 sfx_event_count
 beauty_relevance_gate_pass

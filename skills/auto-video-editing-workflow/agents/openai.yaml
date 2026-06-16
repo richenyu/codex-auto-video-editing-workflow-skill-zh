@@ -1,4 +1,4 @@
 interface:
   display_name: "Codex 自动视频剪辑工作流 Skill"
-  short_description: "中文 AI 自动化剪辑口播视频：顺稿去重、字幕/BGM/音效、素材匹配、全屏插片和 QA。"
-  default_prompt: "使用 Codex 自动视频剪辑工作流 Skill，按照保存的底层逻辑剪辑最新口播视频。"
+  short_description: "Codex 自动剪辑 Skill：中文口播视频自动剪辑工作流，含顺稿去重、素材匹配、字幕/BGM/音效和 QA。"
+  default_prompt: "使用 Codex 自动视频剪辑工作流 Skill，先检查环境和成片规格，再按照保存的底层逻辑剪辑最新口播视频。"

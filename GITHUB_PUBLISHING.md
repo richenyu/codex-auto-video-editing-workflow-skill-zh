@@ -26,16 +26,27 @@ richenyu/codex-auto-video-editing-workflow-skill
 Codex 自动视频剪辑工作流 Skill
 ```
 
+## 中文主推关键词
+
+```text
+Codex 自动剪辑 Skill
+Codex 视频剪辑工作流
+Codex 口播视频自动剪辑
+Codex 自动剪视频 Skill
+口播视频自动剪辑工作流
+中文 Codex 自动化视频剪辑 Skill
+```
+
 ## GitHub 描述建议
 
 ```text
-Codex 自动视频剪辑工作流 Skill：中文 AI 自动化剪辑工作流，支持口播清理、重复话术删除、文案字幕对齐、BGM/音效、素材匹配、真实视频 cutaway、素材来源表和 QA 审计。
+Codex 自动视频剪辑工作流 Skill：中文 AI 自动化剪辑工作流，也适合搜索 Codex 自动剪辑 Skill、Codex 视频剪辑工作流、Codex 口播视频自动剪辑；支持口播清理、素材匹配、字幕/BGM/音效和 QA 审计。
 ```
 
 备选长描述：
 
 ```text
-Codex 自动视频剪辑工作流 Skill：可从 GitHub 安装的中文 Codex Skill，用于财经、商业、AI、技术和知识类口播视频的自动化剪辑，覆盖顺稿去重、停顿删除、字幕文案对齐、BGM/音效、素材匹配、全屏插片和成片 QA。
+Codex 自动视频剪辑工作流 Skill：可从 GitHub 安装的中文 Codex Skill，用于财经、商业、AI、技术和知识类口播视频的自动化剪辑，覆盖顺稿去重、停顿删除、字幕文案对齐、BGM/音效、素材匹配、全屏插片、安装向导和成片 QA。
 ```
 
 ## 推荐 Topics
@@ -63,6 +74,9 @@ chinese-video
 - INSTALL 为中文。
 - SEO 关键词为中文。
 - SKILL.md 有中文触发词。
+- README 前部包含 Codex 自动剪辑 Skill、Codex 视频剪辑工作流、Codex 口播视频自动剪辑。
+- INSTALL 写清三步上手：检查环境、选择比例、放入口播/文案/BGM。
+- 成片质量闭环写清：口播清理、素材匹配、字幕/BGM/音效、QA 审计。
 - references 中保留中文底层逻辑。
 - `.gitignore` 排除原视频、成片、BGM、素材、缓存、密钥。
 - 不提交 API key。

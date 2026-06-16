@@ -18,6 +18,11 @@ richenyu/codex-auto-video-editing-workflow-skill-zh/skills/auto-video-editing-wo
 ```text
 Codex 自动视频剪辑工作流 Skill
 Codex 自动视频剪辑工作流 Skill 中文版
+Codex 自动剪辑 Skill
+Codex 视频剪辑工作流
+Codex 口播视频自动剪辑
+Codex 自动剪视频 Skill
+Codex 短视频剪辑 Skill
 中文 Codex 自动化视频剪辑 Skill
 AI 口播视频自动剪辑工作流 GitHub
 Codex 口播视频自动剪辑 Skill
@@ -30,6 +35,38 @@ Codex 口播视频自动剪辑 Skill
 ```powershell
 python "$env:USERPROFILE\.codex\skills\.system\skill-installer\scripts\install-skill-from-github.py" "richenyu/codex-auto-video-editing-workflow-skill-zh/skills/auto-video-editing-workflow"
 ```
+
+## 三步上手
+
+安装完成后，按这三步走：
+
+```text
+1. 环境检查：让 Codex 检查 FFmpeg、Python、转写工具、输入/输出/BGM/报告目录。
+2. 规格选择：第一次先选 4:3、9:16、16:9 或保持源比例。
+3. 放入素材：把口播视频放进 input，把同名正式文案放在旁边，把 BGM 放进 bgm。
+```
+
+推荐第一句：
+
+```text
+使用 $auto-video-editing-workflow，先检查环境，创建输入/输出/BGM/报告目录，并让我选择成片规格。
+```
+
+开始剪片时：
+
+```text
+我已经把口播视频放进 input 文件夹，请使用 $auto-video-editing-workflow 按保存的底层逻辑剪最新视频。
+```
+
+如果有正式文案，优先放成同名文件：
+
+```text
+input/
+  视频名.mp4
+  视频名.txt
+```
+
+这样字幕、素材时间点和 B-roll 匹配会更稳定。
 
 ## 安装后测试
 
@@ -134,6 +171,19 @@ BGM：<工作区>\bgm
 ## 安全规则
 
 脚本可以帮助检查和配置环境，但 Codex 不应该静默下载安装工具。缺什么要先说明，再问用户是否允许安装。
+
+## 成片质量检查
+
+每次正式导出前，都要让 Codex 保留这四个检查：
+
+```text
+口播清理：停顿、重复、错话、重说、废话是否已经剪掉。
+素材匹配：每个 B-roll / cutaway 是否贴当前句子，是否好看，是否不重复。
+字幕/BGM/音效：字幕是否对齐，BGM 是否轻快且不压人声，音效是否轻且不固定。
+QA 审计：是否有素材来源表、规则审计、抽帧图或事件图、解码检查。
+```
+
+如果其中任何一项缺失，这次输出只能算测试版，不算正式优质成片。
 
 以下内容不要提交到 GitHub：
 

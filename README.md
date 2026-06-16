@@ -8,6 +8,8 @@
 
 **Codex 自动视频剪辑工作流 Skill** 是一个面向中文创作者的 AI 自动化剪辑工作流。它适合用来处理财经口播、商业解释、AI 创业、技术教程、美股分析、知识分享和短视频批量生产场景，核心目标是让 Codex 自动完成“顺稿、剪停顿、删重复、对齐字幕、匹配素材、加 BGM 音效、导出成片、做质量检查”这一整套流程。
 
+如果要在 GitHub、Codex、AI 搜索或浏览器里找这个仓库，推荐搜索：**Codex 自动剪辑 Skill**、**Codex 视频剪辑工作流**、**Codex 口播视频自动剪辑**、**Codex 自动剪视频 Skill**、**口播视频自动剪辑工作流**。
+
 ## 核心使用方式
 
 这个 Skill 的核心输入是 **已经录好的口播视频**。
@@ -128,6 +130,19 @@ BGM：默认轻快、正向、低音量
 真人段落动态信息贴片：约 8-14 个
 ```
 
+## 成片质量闭环
+
+每次正式出片都要同时守住四条质量线：
+
+```text
+口播清理不丢：先删停顿、错话、重复、重说，再做视觉包装。
+素材匹配不丢：素材必须贴当前句子，同时好看、清晰、无重复。
+字幕/BGM/音效不丢：正式成片默认字幕对齐、BGM 轻快、音效轻且有变化。
+QA 审计不丢：导出前检查比例、解码、音量、字幕、素材来源、抽帧/事件图。
+```
+
+如果新增风格导致其中一条消失，例如只有素材没有贴片、只有贴片没有真实 cutaway、字幕和声音不同步、BGM 压人声、素材重复或弱匹配，都不能当作正式成片交付。
+
 ## 不能妥协的规则
 
 - 先清理口播，再加素材。
@@ -154,6 +169,24 @@ richenyu/codex-auto-video-editing-workflow-skill-zh/skills/auto-video-editing-wo
 
 ```powershell
 python "$env:USERPROFILE\.codex\skills\.system\skill-installer\scripts\install-skill-from-github.py" "richenyu/codex-auto-video-editing-workflow-skill-zh/skills/auto-video-editing-workflow"
+```
+
+## 三步上手
+
+1. 安装 Skill 后，先让 Codex 检查环境和目录。
+2. 第一次使用时选择成片规格：4:3、9:16、16:9 或保持源比例。
+3. 把口播视频放到输入文件夹，把同名文案放在旁边，把 BGM 放进 BGM 文件夹，然后让 Codex 剪最新视频。
+
+推荐第一次对 Codex 说：
+
+```text
+使用 $auto-video-editing-workflow，先检查环境，创建输入/输出/BGM/报告目录，并让我选择成片规格。
+```
+
+开始剪片时说：
+
+```text
+我已经把口播视频放进 input 文件夹，请使用 $auto-video-editing-workflow 按保存的底层逻辑剪最新视频。
 ```
 
 ## 安装后第一句话
@@ -194,6 +227,6 @@ skills/auto-video-editing-workflow/
 
 ## SEO 关键词
 
-Codex 自动视频剪辑工作流 Skill、Codex 自动视频剪辑、Codex 自动化剪辑、AI 自动剪视频、口播视频自动剪辑、短视频自动化剪辑、自动剪掉重复话术、自动删除口播停顿、文案字幕自动对齐、自动加字幕 BGM 音效、财经口播剪辑、商业解释视频剪辑、技术教程视频剪辑、素材自动匹配、真实视频素材 cutaway、动态信息贴片、4:3 短视频剪辑、中文 Codex Skill、可安装 Codex 工作流。
+Codex 自动视频剪辑工作流 Skill、Codex 自动剪辑 Skill、Codex 视频剪辑工作流、Codex 口播视频自动剪辑、Codex 自动剪视频 Skill、Codex 短视频剪辑 Skill、Codex 自动视频剪辑、Codex 自动化剪辑、AI 自动剪视频、口播视频自动剪辑、短视频自动化剪辑、自动剪掉重复话术、自动删除口播停顿、文案字幕自动对齐、自动加字幕 BGM 音效、财经口播剪辑、商业解释视频剪辑、技术教程视频剪辑、素材自动匹配、真实视频素材 cutaway、动态信息贴片、4:3 短视频剪辑、中文 Codex Skill、可安装 Codex 工作流。
 
 更多关键词布局见 [SEO_KEYWORDS.md](SEO_KEYWORDS.md)。
