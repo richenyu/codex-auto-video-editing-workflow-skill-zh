@@ -14,17 +14,19 @@ description: Codex 自动视频剪辑工作流 Skill。用于 Codex 被要求做
 执行顺序固定：
 
 ```text
-1. 确认源视频、文案、目标比例和输出目录。
-2. 如果是多段视频，先做源文件预检，确认 1/2、上/下、part1/part2 没混错。
-3. 先清理口播：停顿、重复、错话、重说、半句话、低信息量片段。
-4. 先做顺畅的口播时间线，再加素材。
-5. 默认口播清理后做 1.2 倍语速，保持音高不变。
-6. 字幕和素材时间点必须对齐最终清理后的音频，不能沿用原始 ASR 时间。
-7. 按最终文案或清理稿拆成素材需求点。
-8. 素材必须同时通过“句子级匹配”和“好看”两道门。
-9. 混合使用真人、真人加动态信息贴片、大素材、全屏资料卡、真实/视频化 cutaway。
-10. 正式成片默认加字幕、轻快低音量 BGM、轻量且不重复的音效。
-11. 交付前必须做规则审计、技术 QA、抽帧/事件 QA。
+1. 新电脑或首次使用时，先做环境检查和首次使用向导。
+2. 让用户选择目标规格：4:3、竖屏 9:16、横屏 16:9，或保持源比例。
+3. 确认源视频、文案、目标比例、输入/输出/BGM/素材目录。
+4. 如果是多段视频，先做源文件预检，确认 1/2、上/下、part1/part2 没混错。
+5. 先清理口播：停顿、重复、错话、重说、半句话、低信息量片段。
+6. 先做顺畅的口播时间线，再加素材。
+7. 默认口播清理后做 1.2 倍语速，保持音高不变。
+8. 字幕和素材时间点必须对齐最终清理后的音频，不能沿用原始 ASR 时间。
+9. 按最终文案或清理稿拆成素材需求点。
+10. 素材必须同时通过“句子级匹配”和“好看”两道门。
+11. 混合使用真人、真人加动态信息贴片、大素材、全屏资料卡、真实/视频化 cutaway。
+12. 正式成片默认加字幕、轻快低音量 BGM、轻量且不重复的音效。
+13. 交付前必须做规则审计、技术 QA、抽帧/事件 QA。
 ```
 
 不能用素材、音乐、音效去掩盖口播时间线的问题。
@@ -42,9 +44,11 @@ description: Codex 自动视频剪辑工作流 Skill。用于 Codex 被要求做
 
 ## 默认行为
 
-- 当前默认成片比例：4:3，1440x1080，30fps，MP4。
+- 当前默认成片比例：首次使用必须提醒用户选择；如果用户不选，才使用 4:3，1440x1080，30fps，MP4。
+- 4:3 适合用户当前的小林说式横板讲解画面：1440x1080。
 - 用户明确要求竖屏时，用 9:16，1080x1920。
 - 用户明确要求横屏时，用 16:9，1920x1080。
+- 用户想保留原视频比例时，用 source，但仍要做清理、字幕、素材和 QA。
 - 默认口播速度：清理后 1.2 倍，保持音高。
 - 默认正式成片：内嵌字幕、低音量轻快 BGM、轻音效。
 - 默认素材节奏：真人约 45%-55%，素材主导约 45%-55%。
@@ -201,3 +205,17 @@ ffmpeg/ffprobe 解码是否通过
 运行 `scripts/check-video-workflow.ps1` 检查本机路径、工具和常见脚本。
 
 新电脑缺少工具时，先说明缺什么并请求用户同意，再运行 `scripts/setup-video-workflow.ps1`。不要静默下载安装 FFmpeg、Python 包或大模型。
+
+首次配置示例：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\setup-video-workflow.ps1 -TargetProfile ask
+```
+
+如果用户已经明确平台规格，可以直接传：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\setup-video-workflow.ps1 -TargetProfile 4x3
+powershell -ExecutionPolicy Bypass -File scripts\setup-video-workflow.ps1 -TargetProfile vertical
+powershell -ExecutionPolicy Bypass -File scripts\setup-video-workflow.ps1 -TargetProfile horizontal
+```

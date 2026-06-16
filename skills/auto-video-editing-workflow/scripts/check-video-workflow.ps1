@@ -28,6 +28,8 @@ if (-not $OutputDir) { $OutputDir = Join-Path $ProjectRoot "output" }
 if (-not $BgmDir) { $BgmDir = Join-Path $ProjectRoot "bgm" }
 if (-not $ReportsDir) { $ReportsDir = Join-Path $ProjectRoot "reports" }
 
+$ConfigPath = Join-Path $ProjectRoot "workflow-config.json"
+
 $items = @(
     @{ Label = "Project root"; Path = $ProjectRoot; Type = "Directory" },
     @{ Label = "Installed skill root"; Path = $SkillRoot; Type = "Directory" },
@@ -35,6 +37,7 @@ $items = @(
     @{ Label = "Output folder"; Path = $OutputDir; Type = "Directory" },
     @{ Label = "BGM folder"; Path = $BgmDir; Type = "Directory" },
     @{ Label = "Reports folder"; Path = $ReportsDir; Type = "Directory" },
+    @{ Label = "Workflow config"; Path = $ConfigPath; Type = "File" },
     @{ Label = "Skill entry"; Path = (Join-Path $SkillRoot "SKILL.md"); Type = "File" },
     @{ Label = "Skill workflow reference"; Path = (Join-Path $SkillRoot "references\workflow.md"); Type = "File" },
     @{ Label = "Skill style rules"; Path = (Join-Path $SkillRoot "references\style-rules.md"); Type = "File" },
@@ -69,4 +72,21 @@ foreach ($item in $items) {
     Label = "python on PATH"
     Exists = [bool](Find-CommandPath "python")
     Path = Find-CommandPath "python"
+}
+
+if (Test-Path -LiteralPath $ConfigPath -PathType Leaf) {
+    try {
+        $config = Get-Content -LiteralPath $ConfigPath -Raw -Encoding UTF8 | ConvertFrom-Json
+        [PSCustomObject]@{
+            Label = "Configured target profile"
+            Exists = $true
+            Path = ("{0} {1}x{2} {3}fps" -f $config.target.aspect_ratio, $config.target.width, $config.target.height, $config.target.fps)
+        }
+    } catch {
+        [PSCustomObject]@{
+            Label = "Configured target profile"
+            Exists = $false
+            Path = "workflow-config.json exists but could not be parsed"
+        }
+    }
 }

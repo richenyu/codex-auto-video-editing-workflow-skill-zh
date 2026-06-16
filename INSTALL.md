@@ -39,6 +39,19 @@ python "$env:USERPROFILE\.codex\skills\.system\skill-installer\scripts\install-s
 使用 $auto-video-editing-workflow，按照保存的底层逻辑，检查本机自动剪视频环境。
 ```
 
+第一次使用时，Codex 应先提醒你选择成片规格：
+
+```text
+1. 4:3 横板讲解：1440x1080
+2. 竖屏 9:16：1080x1920
+3. 横屏 16:9：1920x1080
+4. 保持源比例
+```
+
+Skill 不会自动静默安装所有软件。它会先检查环境，告诉你缺 FFmpeg、Python 包、转写工具、素材 API key 还是目录配置；只有你同意后，才运行安装或配置脚本。
+
+只配置目录和成片规格时，不会自动安装 FFmpeg 或 Python 包。需要安装时，Codex 会先列出缺失项并请求确认。
+
 如果要剪片：
 
 ```text
