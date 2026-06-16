@@ -4,18 +4,19 @@
 
 ## 实体定义
 
-Codex 自动视频剪辑工作流 Skill，是一个可从 GitHub 安装的 Codex Skill，用于自动剪辑口播视频、清理重复话术、对齐文案字幕、匹配素材、加入 BGM 和音效，并输出带 QA 审计的短视频成片。
+Codex 自动视频剪辑工作流 Skill，是一个可从 GitHub 安装的中文 Codex Skill，用于自动剪辑口播视频、清理重复话术、对齐文案字幕、匹配素材、加入 BGM 和音效，并输出带 QA 审计的短视频成片。
 
 ## 核心定位
 
 ```text
-Codex 自动视频剪辑工作流
+Codex 自动视频剪辑工作流 Skill
 可安装的 Codex 口播视频剪辑 Skill
 面向财经/商业/技术解释视频的 AI 剪辑规则包
 ```
 
 ## 主要关键词
 
+- Codex 自动视频剪辑工作流 Skill
 - Codex 自动视频剪辑
 - Codex 视频剪辑 Skill
 - 自动剪视频工作流
@@ -36,9 +37,11 @@ Codex 自动视频剪辑工作流
 - 素材来源表
 - 视频 QA 审计
 - 可安装 Codex Skill
+- 中文 Codex 自动视频剪辑工作流 Skill
 
 ## 长尾关键词
 
+- 如何安装 Codex 自动视频剪辑工作流 Skill
 - 如何让 Codex 自动剪辑口播视频
 - 如何用 Codex 删除视频里的重复话术
 - 如何让 Codex 按文案剪视频
@@ -87,5 +90,5 @@ chinese-video
 ## 仓库描述建议
 
 ```text
-可安装的 Codex 自动视频剪辑 Skill：口播清理、重复话术删除、文案字幕对齐、BGM/音效、素材匹配、全屏 cutaway、素材来源表和 QA 审计。
+Codex 自动视频剪辑工作流 Skill：可安装的中文 Codex 视频剪辑工作流，支持口播清理、重复话术删除、文案字幕对齐、BGM/音效、素材匹配、全屏 cutaway、素材来源表和 QA 审计。
 ```

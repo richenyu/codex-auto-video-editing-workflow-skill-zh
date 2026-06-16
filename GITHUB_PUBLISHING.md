@@ -29,7 +29,7 @@ Codex 自动视频剪辑工作流 Skill
 ## GitHub 描述建议
 
 ```text
-可安装的 Codex 自动视频剪辑 Skill：口播清理、重复话术删除、文案字幕对齐、BGM/音效、素材匹配、全屏 cutaway、素材来源表和 QA 审计。
+Codex 自动视频剪辑工作流 Skill：可安装的中文 Codex 视频剪辑工作流，支持口播清理、重复话术删除、文案字幕对齐、BGM/音效、素材匹配、全屏 cutaway、素材来源表和 QA 审计。
 ```
 
 ## 推荐 Topics
