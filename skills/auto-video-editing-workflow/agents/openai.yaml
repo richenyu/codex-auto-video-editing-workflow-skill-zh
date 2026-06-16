@@ -1,0 +1,4 @@
+interface:
+  display_name: "自动视频剪辑工作流"
+  short_description: "按底层逻辑自动剪辑口播视频，处理字幕、配乐、音效、素材和 QA。"
+  default_prompt: "使用自动视频剪辑工作流，按照保存的底层逻辑剪辑最新口播视频。"

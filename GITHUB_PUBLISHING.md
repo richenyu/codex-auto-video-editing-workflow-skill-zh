@@ -1,0 +1,65 @@
+# GitHub 发布说明
+
+建议仓库：
+
+```text
+richenyu/codex-auto-video-editing-workflow-skill-zh
+```
+
+安装路径：
+
+```text
+richenyu/codex-auto-video-editing-workflow-skill-zh/skills/auto-video-editing-workflow
+```
+
+## 发布目标
+
+这是纯中文版公开仓库，给中文用户和同事安装使用。英文用户使用英文版仓库：
+
+```text
+richenyu/codex-auto-video-editing-workflow-skill
+```
+
+## 公开名称
+
+```text
+Codex 自动视频剪辑工作流 Skill
+```
+
+## GitHub 描述建议
+
+```text
+可安装的 Codex 自动视频剪辑 Skill：口播清理、重复话术删除、文案字幕对齐、BGM/音效、素材匹配、全屏 cutaway、素材来源表和 QA 审计。
+```
+
+## 推荐 Topics
+
+```text
+codex
+codex-skill
+video-editing
+ai-video-editing
+short-form-video
+talking-head-video
+workflow-automation
+b-roll
+captions
+ffmpeg
+creator-tools
+finance-explainer
+business-explainer
+chinese-video
+```
+
+## 发布检查
+
+- README 为中文。
+- INSTALL 为中文。
+- SEO 关键词为中文。
+- SKILL.md 有中文触发词。
+- references 中保留中文底层逻辑。
+- `.gitignore` 排除原视频、成片、BGM、素材、缓存、密钥。
+- 不提交 API key。
+- 不提交用户原始视频。
+- 不提交下载素材或成片。
+- Skill frontmatter 只有 `name` 和 `description`。

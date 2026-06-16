@@ -1,0 +1,42 @@
+# Secrets
+.env
+.env.local
+*.key
+*.pem
+
+# Raw and generated media
+input/
+output/
+bgm/
+assets/
+stock-cache/
+downloaded_stock*/
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.wav
+*.mp3
+*.m4a
+*.aac
+
+# QA and reports
+reports/
+contact_sheets/
+*_contact_sheet.*
+*_qa.*
+*_audit.*
+
+# Python / tools
+.venv/
+venv/
+__pycache__/
+*.pyc
+tools/
+ffmpeg/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
