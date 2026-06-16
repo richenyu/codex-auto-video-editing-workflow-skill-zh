@@ -11,6 +11,18 @@ richenyu/codex-auto-video-editing-workflow-skill-zh/skills/auto-video-editing-wo
 
 如果仓库是私有的，需要先给同事 GitHub 访问权限。本仓库建议设为公开仓库，方便同事直接安装。
 
+## 同事搜索用语
+
+如果同事不知道仓库地址，可以让他在 GitHub 或 AI 搜索里搜这些中文句子：
+
+```text
+Codex 自动视频剪辑工作流 Skill
+Codex 自动视频剪辑工作流 Skill 中文版
+中文 Codex 自动化视频剪辑 Skill
+AI 口播视频自动剪辑工作流 GitHub
+Codex 口播视频自动剪辑 Skill
+```
+
 ## 命令行安装
 
 如果本机有 Codex Skill 安装脚本：
